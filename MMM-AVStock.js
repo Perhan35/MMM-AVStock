@@ -494,7 +494,10 @@ Module.register("MMM-AVStock", {
         } else if (this.config.mode === "ticker"){
             this.updateTicker(this.stocks[stock]);
         } else if (this.config.mode === "grid"){
-            this.updateGrid(this.stocks[stock]);
+            // var ppd = (stock.quote.profit) ? "profit" : "loss";
+            // if(ppd === "profit") {
+                this.updateGrid(this.stocks[stock]);
+            // }
         }
         if (this.config.showChart) {
             this.updateChart(this.stocks[stock]);
